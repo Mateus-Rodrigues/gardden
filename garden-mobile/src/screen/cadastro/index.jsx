@@ -1,36 +1,61 @@
+import { useState } from "react";
 
 import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar } from "react-native";
 import styles from "./styles";
 import MyButton from "../../components/button";
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 const Cadastro = () => {
+
+  const [nome, setNome] = useState(' ');
+  const [usuario, setUsuario] = useState(' ');
+  const [email, setEmail] = useState(' ');
+  const [trabalho, setTrabalho] = useState(' ');
+  const [estCivil, setEstCivil] = useState(' ');
+  const [senha, setSenha] = useState(' ');
+  const [confirmar, setConfirmar] = useState(' ');
+
+  const handleLogin = () => {
+    // Lógica de login aqui
+    console.log('Nome:', nome);
+    console.log('Usuario:', usuario);
+    console.log('Email:', email);
+    console.log('Trabalho:', trabalho);
+    console.log('estado civil:', estCivil);
+    console.log('Senha:', senha);
+    console.log('Confirmar Senha:', confirmar);
+  };
+
   return (
     <View>
-        <StatusBar
-            barStyle="light-content" // Define o estilo da barra (pode ser "light-content", "dark-content" ou "default")
-            backgroundColor="#000" // Define a cor de fundo da barra de status (Android)
-            translucent={false} // Controla se a barra de status é translúcida (Android)
-        />
-        <ImageBackground style={styles.img} source={require("../../../assets/image22.png")} >
-          <Text style={styles.title}>GARDEN</Text>
+      <StatusBar
+        barStyle="light-content" // Define o estilo da barra (pode ser "light-content", "dark-content" ou "default")
+        backgroundColor="#000" // Define a cor de fundo da barra de status (Android)
+        translucent={false} // Controla se a barra de status é translúcida (Android)
+      />
+      <ImageBackground style={styles.img} source={require("../../../assets/image22.png")} >
+        <Text style={styles.title}>GARDEN</Text>
 
-           <View style={styles.container}>
+        <View style={styles.container}>
 
           <Text style={styles.cad}>Cadastre-se</Text>
 
           <View style={styles.textForm}>
-            <TextInput style={styles.inpTex} placeholder="Nome Completo" />
-            <TextInput style={styles.inpTex}  placeholder="Nome de usuário" />
-            <TextInput style={styles.inpTex}  placeholder="Trabalho" />
-            <TextInput style={styles.inpTex}  placeholder="Estado Civil" />
-            <TextInput style={styles.inpTex}  placeholder="Senha" />
-            <TextInput style={styles.inpTex}  placeholder="Confirmar senha" />
+            <Icon name="user" size={20} color="#000" style={styles.icon} />
+            <TextInput style={styles.inpTex} placeholder="Nome Completo" value="nome" onChangeText={setNome} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Nome de usuário" value="usuaruio" onChangeText={setUsuario} keyboardType="defult"  placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="E-mail" value="email" onChangeText={setEmail} keyboardType="email-address"  placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Trabalho" value="trabalho" onChangeText={setTrabalho} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Estado Civil" value="estCivil" onChangeText={setEstCivil} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Senha" value="senha" onChangeText={setSenha} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Confirmar senha" value="confirmar" onChangeText={setConfirmar} keyboardType="default" placeholderTextColor={'#fff'} />
           </View>
-          <MyButton title="CRIAR" onPress={() => alert('Cadastro criado com sucesso !' )} />
-        
+          <MyButton title="CRIAR" onPress={() => alert('Cadastro criado com sucesso !')} />
+
         </View>
       </ImageBackground>
-    </View> 
+    </View>
   );
 };
 
