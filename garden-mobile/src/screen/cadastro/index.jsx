@@ -43,15 +43,15 @@ const Cadastro = () => {
 
           <View style={styles.textForm}>
             <Icon name="user" size={20} color="#000" style={styles.icon} />
-            <TextInput style={styles.inpTex} placeholder="Nome Completo" value="nome" onChangeText={setNome} keyboardType="default" placeholderTextColor={'#fff'} />
-            <TextInput style={styles.inpTex} placeholder="Nome de usuário" value="usuaruio" onChangeText={setUsuario} keyboardType="defult"  placeholderTextColor={'#fff'} />
-            <TextInput style={styles.inpTex} placeholder="E-mail" value="email" onChangeText={setEmail} keyboardType="email-address"  placeholderTextColor={'#fff'} />
-            <TextInput style={styles.inpTex} placeholder="Trabalho" value="trabalho" onChangeText={setTrabalho} keyboardType="default" placeholderTextColor={'#fff'} />
-            <TextInput style={styles.inpTex} placeholder="Estado Civil" value="estCivil" onChangeText={setEstCivil} keyboardType="default" placeholderTextColor={'#fff'} />
-            <TextInput style={styles.inpTex} placeholder="Senha" value="senha" onChangeText={setSenha} keyboardType="default" placeholderTextColor={'#fff'} />
-            <TextInput style={styles.inpTex} placeholder="Confirmar senha" value="confirmar" onChangeText={setConfirmar} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Nome Completo" /*value="Nome Completo"*/ onChangeText={setNome} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Nome de usuário"/* value="Nome de usuário"*/ onChangeText={setUsuario} keyboardType="defult"  placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="E-mail" /*value="E-mail"*/ onChangeText={setEmail} keyboardType="email-address"  placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Trabalho" /*value="Trabalho"*/ onChangeText={setTrabalho} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Estado Civil" /*value="Estado Civil"*/ onChangeText={setEstCivil} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Confirmar senha" /*value="Confirmar Senha"*/ onChangeText={setConfirmar} keyboardType="default" placeholderTextColor={'#fff'} />
           </View>
-          <MyButton title="CRIAR" onPress={() => alert('Cadastro criado com sucesso !')} />
+          <MyButton title="CRIAR" onPress={() => alert({nome}, {email} )} />
 
         </View>
       </ImageBackground>
