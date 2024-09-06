@@ -42,8 +42,8 @@ const Login = () => {
           <MyButton title="ENTRAR" onPress={() => alert({nome}, {email} )} />
 
           <View>
-            <Text>Esqueceu a senha</Text>
-            <Text>Cadastre-se</Text>
+            <Text style={styles.links}>Esqueceu a senha</Text>
+            <Text style={styles.links}>Cadastre-se</Text>
           </View>
 
         </View>

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginLeft: '5%',
     borderColor: '#fff',
-    backgroundColor: 'rgba(255,255,255,0.5)',
+    backgroundColor: 'rgba(255,255,255,0.3)',
     padding: 15,
   
   },
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     color:'#01D13A', 
     alignContent: 'center',
     textAlign: 'center',
-    textDecorationLine: 'underline'
+    
   },
   
   cad: {
@@ -41,7 +41,9 @@ const styles = StyleSheet.create({
   },
 
   icon: {
-    marginRight: 100,
+    marginRight: 10,
+    color: '#fff',
+    
   },
 
   inpTex:{
@@ -53,7 +55,8 @@ const styles = StyleSheet.create({
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
-  }
+  },
+  
 });
 
 export default styles;

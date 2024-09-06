@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
     fontSize: 64,
     color:'#01D13A', 
     alignContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    
   },
   
   cad: {
@@ -52,7 +53,14 @@ const styles = StyleSheet.create({
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
-  }
+  },
+
+  links:{
+    textAlign: 'center',
+    fontSize:15,
+    color: '#fff',
+    marginBottom: 20  
+  },
 });
 
 export default styles;
