@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
     fontSize: 64,
     color:'#01D13A', 
     alignContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    textDecorationLine: 'underline'
   },
   
   cad: {
