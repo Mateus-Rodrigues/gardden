@@ -43,7 +43,7 @@ const Cadastro = () => {
 
           <View style={styles.textForm}>
             <Icon name="user" size={20} color="#000" style={styles.icon} />
-            <TextInput style={styles.inpTex} placeholder="Nome Completo" value="" onChangeText={setNome} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Nome Completo" /*value=""*/ onChangeText={setNome} keyboardType="default" placeholderTextColor={'#fff'} />
             <TextInput style={styles.inpTex} placeholder="Nome de usuário" value="" onChangeText={setUsuario} keyboardType="defult" placeholderTextColor={'#fff'} />
             <TextInput style={styles.inpTex} placeholder="E-mail" value="" onChangeText={setEmail} keyboardType="email-address" placeholderTextColor={'#fff'} />
             <TextInput style={styles.inpTex} placeholder="Trabalho" value="" onChangeText={setTrabalho} keyboardType="default" placeholderTextColor={'#fff'} />

@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
 
   icon: {
     marginRight: 10,
-    color: '#fff',
+    color: '#fff000',
     
   },
 
