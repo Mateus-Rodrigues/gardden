@@ -32,10 +32,10 @@ const Login = () => {
 
         <View style={styles.container}>
 
-          <Text style={styles.cad}>Cadastre-se</Text>
+          <Text style={styles.cad}>Login</Text>
 
           <View style={styles.textForm}>
-            <Icon name="user" size={20} color="#000" style={styles.icon} />
+            {/* <Icon name="user" size={20} color="#000" style={styles.icon} /> */}
             <TextInput style={styles.inpTex} placeholder="Nome de usuário"/* value="Nome de usuário"*/ onChangeText={setUsuario} keyboardType="defult"  placeholderTextColor={'#fff'} />
             <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} keyboardType="default" placeholderTextColor={'#fff'} />
           </View>

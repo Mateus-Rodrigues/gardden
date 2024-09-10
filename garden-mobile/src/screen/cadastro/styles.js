@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  img:{
+  img: {
     width: '101%',
     height: '100%'
   },
-  
-  container:{
-    marginTop:40,
+
+  container: {
+    marginTop: 40,
     width: 370,
     height: 590,
     color: '#fff',
@@ -16,39 +16,47 @@ const styles = StyleSheet.create({
     borderColor: '#fff',
     backgroundColor: 'rgba(255,255,255,0.3)',
     padding: 15,
-  
+
   },
-  
-  title:{
+
+  title: {
     marginTop: 35,
     fontSize: 64,
-    color:'#01D13A', 
+    color: '#01D13A',
     alignContent: 'center',
     textAlign: 'center',
-    
+
   },
-  
+
   cad: {
     fontSize: 45,
-    color:'#fff',
-    textAlign:'center',
+    color: '#fff',
+    textAlign: 'center',
     marginBottom: 20,
   },
 
-  textForm:{
+  textForm: {
     color: "#fff",
-    
+
   },
 
   icon: {
     marginRight: 10,
-    color: '#fff000',
-    
+    color: '#fff',
   },
 
-  inpTex:{
-    borderWidth:1,
+  icoUser: {
+    margin: 10,
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  inpTex: {
+
+    borderWidth: 1,
     marginTop: 10,
+    flexDirection: 'row',
     borderColor: '#fff',
     color: '#fff',
     fontSize: 20,
@@ -56,7 +64,21 @@ const styles = StyleSheet.create({
     borderRightWidth: 0,
     borderTopWidth: 0,
   },
-  
+
+  button: {
+    backgroundColor: '#074A05',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 18,
+  }
+
 });
 
 export default styles;

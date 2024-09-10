@@ -7,20 +7,20 @@ const styles = StyleSheet.create({
   },
   
   container:{
-    marginTop:40,
+    marginTop:60,
     width: 370,
-    height: 590,
+    height: 550,
     color: '#fff',
     borderWidth: 1,
     marginLeft: '5%',
     borderColor: '#fff',
-    backgroundColor: 'rgba(255,255,255,0.5)',
+    backgroundColor: 'rgba(255,255,255,0.3)',
     padding: 15,
   
   },
   
   title:{
-    marginTop: 35,
+    marginTop: 40,
     fontSize: 64,
     color:'#01D13A', 
     alignContent: 'center',
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 45,
     color:'#fff',
     textAlign:'center',
-    marginBottom: 20,
+    marginBottom: 40,
   },
 
   textForm:{
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
 
   inpTex:{
     borderWidth:1,
-    marginTop: 10,
+    marginTop: 25,
     borderColor: '#fff',
     color: '#fff',
     fontSize: 20,

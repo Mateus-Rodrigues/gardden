@@ -6,8 +6,8 @@ import Login from './src/screen/login';
 export default function App() {
   return (
     <View >
-      <Cadastro />
-      
+      {/* <Cadastro /> */}
+      <Login />
     </View>
   );
 }
