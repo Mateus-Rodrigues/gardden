@@ -34,7 +34,7 @@ const Cadastro = () => {
         backgroundColor="#000" // Define a cor de fundo da barra de status (Android)
         translucent={false} // Controla se a barra de status é translúcida (Android)
       />
-      <ImageBackground style={styles.img} source={require("../../../assets/image22.png")} >
+      <ImageBackground style={styles.img} source={require("../../../assets/image21.png")} >
         <Text style={styles.title}>GARDEN</Text>
 
         <View style={styles.container}>
@@ -46,7 +46,7 @@ const Cadastro = () => {
             <TextInput placeholder="Nome Completo " style={styles.inpTex} onChangeText={setNome} keyboardType="default" placeholderTextColor={'#fff'} />
             <TextInput placeholder="Nome de usuário" style={styles.inpTex} onChangeText={setUsuario} placeholderTextColor={'#fff'} />
             <TextInput placeholder="E-mail" style={styles.inpTex} onChangeText={setEmail} placeholderTextColor={'#fff'} />
-            <TextInput placeholder="Trabalho" style={styles.inpTex} onChangeText={setTrabalho} placeholderTextColor={'#fff'} />
+            <TextInput placeholder="Profissão" style={styles.inpTex} onChangeText={setTrabalho} placeholderTextColor={'#fff'} />
             <TextInput placeholder="Estado Civil" style={styles.inpTex} onChangeText={setEstCivil} placeholderTextColor={'#fff'} />
             {/* <Icon name="eye" size={20} color="#000" style={styles.icon} /> */}
             <TextInput placeholder="Senha" style={styles.inpTex} onChangeText={setSenha} placeholderTextColor={'#fff'} />
@@ -55,7 +55,7 @@ const Cadastro = () => {
 
           </View>
 
-          <MyButton title="CRIAR" />
+          <MyButton title="CRIAR" onClick = {handleLogin} />
         </View>
       </ImageBackground>
     </View>

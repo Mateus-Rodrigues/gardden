@@ -27,7 +27,7 @@ const Login = () => {
         backgroundColor="#000" // Define a cor de fundo da barra de status (Android)
         translucent={false} // Controla se a barra de status é translúcida (Android)
       />
-      <ImageBackground style={styles.img} source={require("../../../assets/image22.png")} >
+      <ImageBackground style={styles.img} source={require("../../../assets/image21.png")} >
         <Text style={styles.title}>GARDEN</Text>
 
         <View style={styles.container}>
@@ -35,11 +35,12 @@ const Login = () => {
           <Text style={styles.cad}>Login</Text>
 
           <View style={styles.textForm}>
-            {/* <Icon name="user" size={20} color="#000" style={styles.icon} /> */}
-            <TextInput style={styles.inpTex} placeholder="Nome de usuário"/* value="Nome de usuário"*/ onChangeText={setUsuario} keyboardType="defult"  placeholderTextColor={'#fff'} />
-            <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} keyboardType="default" placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Nome de usuário"/* value="Nome de usuário"*/ onChangeText={setUsuario} placeholderTextColor={'#fff'} />
+
+            {/* <Icon name="eye" size={20} color="#fff" style={styles.icon} /> */}
+            <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} placeholderTextColor={'#fff'} />
           </View>
-          <MyButton title="ENTRAR" onPress={() => alert({nome}, {email} )} />
+          <MyButton title="ENTRAR" onClick={handleLogin} />
 
           <View>
             <Text style={styles.links}>Esqueceu a senha</Text>

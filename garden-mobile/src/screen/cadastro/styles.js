@@ -3,7 +3,8 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   img: {
     width: '101%',
-    height: '100%'
+    height: '100%',
+    
   },
 
   container: {
@@ -22,9 +23,11 @@ const styles = StyleSheet.create({
   title: {
     marginTop: 35,
     fontSize: 64,
-    color: '#01D13A',
+    color: '#fff',
     alignContent: 'center',
     textAlign: 'center',
+    fontWeight: 'bold',
+    
 
   },
 
@@ -56,6 +59,7 @@ const styles = StyleSheet.create({
 
     borderWidth: 1,
     marginTop: 10,
+    marginBottom: 5,
     flexDirection: 'row',
     borderColor: '#fff',
     color: '#fff',
@@ -63,6 +67,7 @@ const styles = StyleSheet.create({
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
+    fontFamily: 'Raleway.tff'
   },
 
   button: {
