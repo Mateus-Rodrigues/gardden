@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Button } from "react-native";
+import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Button, Image } from "react-native";
 import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -48,14 +48,21 @@ const Cadastro = () => {
             <TextInput placeholder="E-mail" style={styles.inpTex} onChangeText={setEmail} placeholderTextColor={'#fff'} />
             <TextInput placeholder="Profissão" style={styles.inpTex} onChangeText={setTrabalho} placeholderTextColor={'#fff'} />
             <TextInput placeholder="Estado Civil" style={styles.inpTex} onChangeText={setEstCivil} placeholderTextColor={'#fff'} />
-            {/* <Icon name="eye" size={20} color="#000" style={styles.icon} /> */}
-            <TextInput placeholder="Senha" style={styles.inpTex} onChangeText={setSenha} placeholderTextColor={'#fff'} />
-            {/* <Icon name="eye" size={20} color="#000" style={styles.icon} /> */}
-            <TextInput placeholder="Confirmar senha" style={styles.inpTex} onChangeText={setConfirmar} placeholderTextColor={'#fff'} />
 
+
+            <View style={styles.olho}>
+              <TextInput placeholder="Senha" style={styles.inpTex} onChangeText={setSenha} placeholderTextColor={'#fff'} />
+              <Icon name="eye" size={20} color="#000" style={styles.icon} />
+            </View>
+
+
+            <View style={styles.olho}>
+              <TextInput placeholder="Confirmar senha" style={styles.inpTex} onChangeText={setConfirmar} placeholderTextColor={'#fff'} />
+              <Icon name="eye" size={20} color="#000" style={styles.icon} />
+            </View>
           </View>
 
-          <MyButton title="CRIAR" onClick = {handleLogin} />
+          <MyButton title="CRIAR" onClick={handleLogin} />
         </View>
       </ImageBackground>
     </View>

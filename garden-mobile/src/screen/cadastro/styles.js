@@ -38,21 +38,29 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 
-  textForm: {
-    color: "#fff",
 
+
+  olho:{
+    display: 'flex',
+    flexDirection: 'row',
+    //justifyContent: 'flex-end',
+    alignItems: 'center'
+    
+  },
+
+  ImageStyle: {
+    padding: 10,
+    margin: 5,
+    height: 25,
+    width: 25,
+    resizeMode : 'stretch',
   },
 
   icon: {
-    marginRight: 10,
+    marginLeft: -25,
     color: '#fff',
-  },
-
-  icoUser: {
-    margin: 10,
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    position: 'relative'
+    
   },
 
   inpTex: {
@@ -60,14 +68,13 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginTop: 10,
     marginBottom: 5,
-    flexDirection: 'row',
     borderColor: '#fff',
     color: '#fff',
     fontSize: 20,
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
-    fontFamily: 'Raleway.tff'
+    width: '100%'
   },
 
   button: {
