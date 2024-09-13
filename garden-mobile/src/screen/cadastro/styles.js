@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     resizeMode : 'stretch',
   },
 
-  icon: {
+  iconInput: {
     marginLeft: -25,
     color: '#fff',
     position: 'relative'
