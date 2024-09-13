@@ -4,7 +4,7 @@ import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Bu
 import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { text } from "@fortawesome/fontawesome-svg-core";
+// import { text } from "@fortawesome/fontawesome-svg-core";
 
 
 const Cadastro = () => {
@@ -44,6 +44,8 @@ const Cadastro = () => {
     console.log('estado civil:', estCivil);
     console.log('Senha:', senha);
     console.log('Confirmar Senha:', confirmar);
+    console.log("*******************");
+    
   };
 
   return (
@@ -81,7 +83,7 @@ const Cadastro = () => {
             </View>
           </View>
 
-          <MyButton title="CRIAR" onClick={handleLogin} onPress={handleSubmit} />
+          <MyButton title="CRIAR"  onClick={handleSubmit}  />
         </View>
       </ImageBackground>
     </View>
