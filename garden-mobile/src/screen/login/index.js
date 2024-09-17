@@ -1,23 +1,24 @@
 import { useState } from "react";
 
-import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar } from "react-native";
+import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Pressable } from "react-native";
 import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Cadastro from "../cadastro";
 
 
-const Login = () => {
+const Login = ({ navigation }) => {
 
-  
+
   const [usuario, setUsuario] = useState(' ');
   const [senha, setSenha] = useState(' ');
-  
+
   const handleLogin = () => {
     // Lógica de login aqui
-    
+
     console.log('Usuario:', usuario);
     console.log('Senha:', senha);
-  
+
   };
 
   return (
@@ -43,7 +44,9 @@ const Login = () => {
           <MyButton title="ENTRAR" onClick={handleLogin} />
 
           <View>
-            <Text style={styles.links}>Esqueceu a senha</Text>
+            <Pressable>
+              <Text style={styles.links}>Esqueceu a senha</Text>
+            </Pressable>
             <Text style={styles.links}>Cadastre-se</Text>
           </View>
 

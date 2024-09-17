@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Button, Image, Alert } from "react-native";
+import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Button, Image, Alert} from "react-native";
 import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -81,6 +81,7 @@ const Cadastro = () => {
               <TextInput placeholder="Confirmar senha" style={styles.inpTex} onChangeText={setConfirmar} placeholderTextColor={'#fff'} />
               <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
             </View>
+
           </View>
 
           <MyButton title="CRIAR"  onClick={handleSubmit}  />
