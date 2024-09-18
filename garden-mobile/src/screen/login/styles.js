@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize:15,
     color: '#fff',
-    marginBottom: 20  
+    marginBottom: 20,
+    fontWeight: 'bold',
   },
 });
 

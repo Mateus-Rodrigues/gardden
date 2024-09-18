@@ -10,7 +10,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 export default function Cadastro () {
   const navigation = useNavigation();  // Hook para acessar navegação
   const validateSenha = (senha) => {
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
+      senha
+    );
 
     if(!regex.test(senha)) {
       return false;

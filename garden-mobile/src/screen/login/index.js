@@ -44,10 +44,10 @@ const Login = () => {
           <MyButton title="ENTRAR" onPress={handleLogin} />
 
           <View>
-            <TouchableOpacity onPress={() => navigation.navigate('Cadastro')} style={styles.botao}>
+            <Pressable onPress={() => navigation.navigate('Cadastro')} style={styles.botao}>
               <Text style={styles.links}>Cadastre-se</Text>
-            </TouchableOpacity>
-            <Text style={styles.links}>Cadastre-se</Text>
+            </Pressable>
+            <Text style={styles.links}>Esqueceu a senha?</Text>
           </View>
 
         </View>
