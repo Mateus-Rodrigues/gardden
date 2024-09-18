@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useNavigation } from '@react-navigation/native';
 import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Button, Image, Alert} from "react-native";
 import styles from "./styles";
 import MyButton from "../../components/button";
@@ -7,9 +7,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 // import { text } from "@fortawesome/fontawesome-svg-core";
 
 
-const Cadastro = () => {
-  // const [senha, setSenha] = useState('');
-
+export default function Cadastro () {
+  const navigation = useNavigation();  // Hook para acessar navegação
   const validateSenha = (senha) => {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
@@ -27,13 +26,13 @@ const Cadastro = () => {
     }
   }
 
-  const [nome, setNome] = useState(' ');
-  const [usuario, setUsuario] = useState(' ');
-  const [email, setEmail] = useState(' ');
-  const [trabalho, setTrabalho] = useState(' ');
-  const [estCivil, setEstCivil] = useState(' ');
-  const [senha, setSenha] = useState(' ');
-  const [confirmar, setConfirmar] = useState(' ');
+  const [nome, setNome] = useState('');
+  const [usuario, setUsuario] = useState('');
+  const [email, setEmail] = useState('');
+  const [trabalho, setTrabalho] = useState('');
+  const [estCivil, setEstCivil] = useState('');
+  const [senha, setSenha] = useState('');
+  const [confirmar, setConfirmar] = useState('');
 
   const handleLogin = () => {
     // Lógica de login aqui
@@ -91,4 +90,4 @@ const Cadastro = () => {
   );
 };
 
-export default Cadastro;
+

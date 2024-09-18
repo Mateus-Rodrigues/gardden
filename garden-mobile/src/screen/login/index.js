@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { useNavigation } from '@react-navigation/native';
 import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Pressable } from "react-native";
 import styles from "./styles";
 import MyButton from "../../components/button";
@@ -7,11 +7,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Cadastro from "../cadastro";
 
 
-const Login = ({ navigation }) => {
+const Login = () => {
+  const navigation = useNavigation();  // Hook para acessar navegação
 
-
-  const [usuario, setUsuario] = useState(' ');
-  const [senha, setSenha] = useState(' ');
+  const [usuario, setUsuario] = useState('');
+  const [senha, setSenha] = useState('');
 
   const handleLogin = () => {
     // Lógica de login aqui
@@ -39,14 +39,14 @@ const Login = ({ navigation }) => {
             <TextInput style={styles.inpTex} placeholder="Nome de usuário"/* value="Nome de usuário"*/ onChangeText={setUsuario} placeholderTextColor={'#fff'} />
 
             {/* <Icon name="eye" size={20} color="#fff" style={styles.icon} /> */}
-            <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} placeholderTextColor={'#fff'} />
+            <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} placeholderTextColor={'#fff'} secureTextEntry={true} />
           </View>
-          <MyButton title="ENTRAR" onClick={handleLogin} />
+          <MyButton title="ENTRAR" onPress={handleLogin} />
 
           <View>
-            <Pressable>
-              <Text style={styles.links}>Esqueceu a senha</Text>
-            </Pressable>
+            <TouchableOpacity onPress={() => navigation.navigate('Cadastro')} style={styles.botao}>
+              <Text style={styles.links}>Cadastre-se</Text>
+            </TouchableOpacity>
             <Text style={styles.links}>Cadastre-se</Text>
           </View>
 
