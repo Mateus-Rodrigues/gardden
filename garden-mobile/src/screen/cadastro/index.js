@@ -18,6 +18,15 @@ export default function Cadastro () {
     return true;
   };
 
+  const ValidateEmail = (email) =>{
+    const regex  = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+
+    if(!regex.test(email)) {
+      return false;
+    }
+    return true
+  };
+
   const Validacao =() => {
     
     if (senha !== confirmar) {
@@ -33,6 +42,14 @@ export default function Cadastro () {
         'A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial.'
       );
     
+    if (ValidateEmail(email)){
+      Alert.alert('Email Invalido!');
+      handleLogin();
+    }else{
+      Alert.alert(
+        'O E-mail que voce digitou não atende aos requisitos de segurança do email'
+      );
+    }
     
     }
   }
