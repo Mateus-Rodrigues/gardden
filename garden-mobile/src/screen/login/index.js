@@ -41,7 +41,7 @@ const Login = () => {
             {/* <Icon name="eye" size={20} color="#fff" style={styles.icon} /> */}
             <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} placeholderTextColor={'#fff'} secureTextEntry={true} />
           </View>
-          <MyButton title="ENTRAR" onPress={handleLogin} />
+          <MyButton title="ENTRAR" onClick={handleLogin} />
 
           <View>
             <Pressable onPress={() => navigation.navigate('Cadastro')} style={styles.botao}>

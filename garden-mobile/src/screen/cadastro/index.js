@@ -10,9 +10,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 export default function Cadastro () {
   const navigation = useNavigation();  // Hook para acessar navegação
   const validateSenha = (senha) => {
-    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
-      senha
-    );
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
 
     if(!regex.test(senha)) {
       return false;
@@ -20,11 +18,22 @@ export default function Cadastro () {
     return true;
   };
 
-  const handleSubmit =() => {
+  const Validacao =() => {
+    
+    if (senha !== confirmar) {
+      Alert.alert('As senhas não coincidem!');
+      return;
+    }
+  
     if (validateSenha(senha)) {
-      Alert.alert('Senha Valida!');
+      Alert.alert('Senha válida!');
+      handleLogin();  // Aqui você poderia chamar a função de login ou cadastro
     } else {
-      Alert.alert('A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial.')
+      Alert.alert(
+        'A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial.'
+      );
+    
+    
     }
   }
 
@@ -73,19 +82,19 @@ export default function Cadastro () {
 
 
             <View style={styles.olho}>
-              <TextInput placeholder="Senha" style={styles.inpTex} onChangeText={(text) => setSenha} placeholderTextColor={'#fff'} />
+              <TextInput placeholder="Senha" style={styles.inpTex} onChangeText={text => setSenha(text)} placeholderTextColor={'#fff'} />
               <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
             </View>
 
 
             <View style={styles.olho}>
-              <TextInput placeholder="Confirmar senha" style={styles.inpTex} onChangeText={setConfirmar} placeholderTextColor={'#fff'} />
+              <TextInput placeholder="Confirmar senha" style={styles.inpTex} onChangeText={text => setConfirmar(text)} placeholderTextColor={'#fff'} />
               <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
             </View>
 
           </View>
 
-          <MyButton title="CRIAR"  onClick={handleSubmit}  />
+          <MyButton title="CRIAR"  onClick={Validacao}  />
         </View>
       </ImageBackground>
     </View>
