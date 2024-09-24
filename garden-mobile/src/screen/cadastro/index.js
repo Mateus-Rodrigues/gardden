@@ -84,7 +84,8 @@ export default function Cadastro() {
         translucent={false} // Controla se a barra de status é translúcida (Android)
       />
       <ImageBackground style={styles.img} source={require("../../../assets/image21.png")} >
-        
+        <KeyboardAvoidingView behavior="padding" enabled>
+          <ScrollView contentContainerStyle={{flexGrow: 1}}>
             <Text style={styles.title}>GARDEN</Text>
 
             <View style={styles.container}>
@@ -115,7 +116,8 @@ export default function Cadastro() {
 
               <MyButton title="CRIAR" onClick={Validacao} />
             </View>
-        
+          </ScrollView>
+        </KeyboardAvoidingView>
       </ImageBackground>
     </View>
   );
