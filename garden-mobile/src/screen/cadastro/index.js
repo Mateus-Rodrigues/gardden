@@ -44,7 +44,7 @@ export default function Cadastro() {
       );
 
       if (ValidateEmail(email)) {
-        Alert.alert('Email Invalido!');
+        Alert.alert('Email válido!');
         handleLogin();
       } else {
         Alert.alert(
