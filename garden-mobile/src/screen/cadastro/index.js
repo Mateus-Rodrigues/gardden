@@ -1,24 +1,24 @@
 import { useState } from "react";
 import { useNavigation } from '@react-navigation/native';
-import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Button, Image, Alert} from "react-native";
+import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Button, Image, Alert, KeyboardAvoidingView, ScrollView } from "react-native";
 import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
 // import { text } from "@fortawesome/fontawesome-svg-core";
 
 
-export default function Cadastro () {
+export default function Cadastro() {
   const navigation = useNavigation();  // Hook para acessar navegação
-  const validateSenha = (senha) => {
+  function validateSenha (senha) {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
 
-    if(!regex.test(senha)) {
+    if (!regex.test(senha)) {
       return false;
     }
     return true;
   };
 
-  const ValidateEmail = (email) =>{
+  function ValidateEmail (email) {
     const regex  = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
 
     if(!regex.test(email)) {
@@ -27,13 +27,14 @@ export default function Cadastro () {
     return true
   };
 
-  const Validacao =() => {
-    
+
+  const Validacao = () => {
+
     if (senha !== confirmar) {
       Alert.alert('As senhas não coincidem!');
       return;
     }
-  
+
     if (validateSenha(senha)) {
       Alert.alert('Senha válida!');
       handleLogin();  // Aqui você poderia chamar a função de login ou cadastro
@@ -41,16 +42,16 @@ export default function Cadastro () {
       Alert.alert(
         'A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial.'
       );
-    
-    if (ValidateEmail(email)){
-      Alert.alert('Email Invalido!');
-      handleLogin();
-    }else{
-      Alert.alert(
-        'O E-mail que voce digitou não atende aos requisitos de segurança do email'
-      );
-    }
-    
+
+      if (ValidateEmail(email)) {
+        Alert.alert('Email Invalido!');
+        handleLogin();
+      } else {
+        Alert.alert(
+          'O E-mail que voce digitou não atende aos requisitos de segurança do email'
+        );
+      }
+
     }
   }
 
@@ -72,7 +73,7 @@ export default function Cadastro () {
     console.log('Senha:', senha);
     console.log('Confirmar Senha:', confirmar);
     console.log("*******************");
-    
+
   };
 
   return (
@@ -83,36 +84,38 @@ export default function Cadastro () {
         translucent={false} // Controla se a barra de status é translúcida (Android)
       />
       <ImageBackground style={styles.img} source={require("../../../assets/image21.png")} >
-        <Text style={styles.title}>GARDEN</Text>
+        
+            <Text style={styles.title}>GARDEN</Text>
 
-        <View style={styles.container}>
+            <View style={styles.container}>
 
-          <Text style={styles.cad}>Cadastre-se</Text>
+              <Text style={styles.cad}>Cadastre-se</Text>
 
-          <View style={styles.textForm}>
+              <View style={styles.textForm}>
 
-            <TextInput placeholder="Nome Completo " style={styles.inpTex} onChangeText={setNome} keyboardType="default" placeholderTextColor={'#fff'} />
-            <TextInput placeholder="Nome de usuário" style={styles.inpTex} onChangeText={setUsuario} placeholderTextColor={'#fff'} />
-            <TextInput placeholder="E-mail" style={styles.inpTex} onChangeText={setEmail} placeholderTextColor={'#fff'} />
-            <TextInput placeholder="Profissão" style={styles.inpTex} onChangeText={setTrabalho} placeholderTextColor={'#fff'} />
-            <TextInput placeholder="Estado Civil" style={styles.inpTex} onChangeText={setEstCivil} placeholderTextColor={'#fff'} />
+                <TextInput placeholder="Nome Completo " style={styles.inpTex} onChangeText={setNome} keyboardType="default" placeholderTextColor={'#fff'} />
+                <TextInput placeholder="Nome de usuário" style={styles.inpTex} onChangeText={setUsuario} placeholderTextColor={'#fff'} />
+                <TextInput placeholder="E-mail" style={styles.inpTex} onChangeText={setEmail} placeholderTextColor={'#fff'} />
+                <TextInput placeholder="Profissão" style={styles.inpTex} onChangeText={setTrabalho} placeholderTextColor={'#fff'} />
+                <TextInput placeholder="Estado Civil" style={styles.inpTex} onChangeText={setEstCivil} placeholderTextColor={'#fff'} />
 
 
-            <View style={styles.olho}>
-              <TextInput placeholder="Senha" style={styles.inpTex} onChangeText={text => setSenha(text)} placeholderTextColor={'#fff'} />
-              <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
+                <View style={styles.olho}>
+                  <TextInput placeholder="Senha" style={styles.inpTex} onChangeText={text => setSenha(text)} placeholderTextColor={'#fff'} />
+                  <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
+                </View>
+
+
+                <View style={styles.olho}>
+                  <TextInput placeholder="Confirmar senha" style={styles.inpTex} onChangeText={text => setConfirmar(text)} placeholderTextColor={'#fff'} />
+                  <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
+                </View>
+
+              </View>
+
+              <MyButton title="CRIAR" onClick={Validacao} />
             </View>
-
-
-            <View style={styles.olho}>
-              <TextInput placeholder="Confirmar senha" style={styles.inpTex} onChangeText={text => setConfirmar(text)} placeholderTextColor={'#fff'} />
-              <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
-            </View>
-
-          </View>
-
-          <MyButton title="CRIAR"  onClick={Validacao}  />
-        </View>
+        
       </ImageBackground>
     </View>
   );
