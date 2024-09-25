@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
   },
 
   links:{
+    cursor: 'pointer',
     textAlign: 'center',
     fontSize:15,
     color: '#fff',
