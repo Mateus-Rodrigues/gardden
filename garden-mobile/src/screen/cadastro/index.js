@@ -101,13 +101,13 @@ export default function Cadastro() {
                 <TextInput placeholder="Estado Civil" style={styles.inpTex} onChangeText={setEstCivil} placeholderTextColor={'#fff'} />
 
 
-                <View style={styles.olho}>
+                <View style={styles.olhoInput}>
                   <TextInput placeholder="Senha" style={styles.inpTex} onChangeText={text => setSenha(text)} placeholderTextColor={'#fff'} />
                   <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
                 </View>
 
 
-                <View style={styles.olho}>
+                <View style={styles.olhoInput}>
                   <TextInput placeholder="Confirmar senha" style={styles.inpTex} onChangeText={text => setConfirmar(text)} placeholderTextColor={'#fff'} />
                   <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
                 </View>

@@ -8,15 +8,16 @@ const styles = StyleSheet.create({
   },
 
   container: {
-    marginTop: 40,
+    marginTop: 15,
     width: 370,
-    height: 590,
+    height: 540,
     color: '#fff',
     borderWidth: 1,
-    marginLeft: '5%',
+    marginLeft: '3%',
     borderColor: '#fff',
-    backgroundColor: 'rgba(255,255,255,0.1)',
+    backgroundColor: 'rgba(255,255,255,0.3)',
     padding: 15,
+    borderRadius: 15
 
   },
 
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
 
 
 
-  olho:{
+  olhoInput:{
     display: 'flex',
     flexDirection: 'row',
     //justifyContent: 'flex-end',
