@@ -39,7 +39,7 @@ const Login = () => {
             <TextInput style={styles.inpTex} placeholder="Nome de usuário"/* value="Nome de usuário"*/ onChangeText={setUsuario} placeholderTextColor={'#fff'} />
 
             {/* <Icon name="eye" size={20} color="#fff" style={styles.icon} /> */}
-            <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} placeholderTextColor={'#fff'} secureTextEntry={true} />
+            <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} placeholderTextColor={'#fff'} />
           </View>
           <MyButton title="ENTRAR" onClick={handleLogin} />
 

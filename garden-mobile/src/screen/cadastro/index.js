@@ -9,7 +9,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default function Cadastro() {
   const navigation = useNavigation();  // Hook para acessar navegação
-  function validateSenha (senha) {
+  function validateSenha(senha) {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
 
     if (!regex.test(senha)) {
@@ -18,10 +18,10 @@ export default function Cadastro() {
     return true;
   };
 
-  function ValidateEmail (email) {
-    const regex  = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+  function ValidateEmail(email) {
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
 
-    if(!regex.test(email)) {
+    if (!regex.test(email)) {
       return false;
     }
     return true
@@ -76,6 +76,8 @@ export default function Cadastro() {
 
   };
 
+  const [isSenhaVisible, setIsSenhaVisible] = useState(true);
+
   return (
     <View>
       <StatusBar
@@ -85,7 +87,7 @@ export default function Cadastro() {
       />
       <ImageBackground style={styles.img} source={require("../../../assets/image21.png")} >
         <KeyboardAvoidingView behavior="padding" enabled>
-          <ScrollView contentContainerStyle={{flexGrow: 1}}>
+          <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
             <Text style={styles.title}>GARDEN</Text>
 
             <View style={styles.container}>
@@ -108,8 +110,15 @@ export default function Cadastro() {
 
 
                 <View style={styles.olhoInput}>
-                  <TextInput placeholder="Confirmar senha" style={styles.inpTex} onChangeText={text => setConfirmar(text)} placeholderTextColor={'#fff'} />
-                  <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
+                  <TextInput 
+                  placeholder="Confirmar senha" 
+                  style={styles.inpTex} 
+                  onChangeText={text => setConfirmar(text)} 
+                  placeholderTextColor={'#fff'} 
+                  secureTextEntry={!isSenhaVisible} />
+                  <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
+                    <Icon name={isSenhaVisible ? 'visibility' : 'visibility-off'} size={20} color="#000" style={styles.iconInput} />
+                  </TouchableOpacity>
                 </View>
 
               </View>
