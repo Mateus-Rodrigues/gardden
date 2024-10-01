@@ -117,7 +117,7 @@ export default function Cadastro() {
                   placeholderTextColor={'#fff'} 
                   secureTextEntry={!isSenhaVisible} />
                   <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
-                    <Icon name={isSenhaVisible ? 'visibility' : 'visibility-off'} size={20} color="#000" style={styles.iconInput} />
+                    <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
                   </TouchableOpacity>
                 </View>
 
