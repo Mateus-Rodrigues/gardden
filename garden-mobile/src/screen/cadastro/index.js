@@ -4,7 +4,7 @@ import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Bu
 import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
-import axios from 'axios';
+// import axios from 'axios';
 // import { text } from "@fortawesome/fontawesome-svg-core";
 
 
@@ -79,6 +79,7 @@ export default function Cadastro() {
   };
 
   const [isSenhaVisible, setIsSenhaVisible] = useState(false);
+  const [isConfirmarVisible, setIsConfirmarVisible] = useState(false);
 
   return (
     <View>
@@ -126,9 +127,10 @@ export default function Cadastro() {
                   style={styles.inpTex} 
                   onChangeText={text => setConfirmar(text)} 
                   placeholderTextColor={'#fff'} 
-                  secureTextEntry={!isSenhaVisible} />
-                  <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
-                    <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
+                  secureTextEntry={!isConfirmarVisible} />
+
+                  <TouchableOpacity onPress={() => setIsConfirmarVisible(!isConfirmarVisible)}>
+                    <Icon name={isConfirmarVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
                   </TouchableOpacity>
                 </View>
 
