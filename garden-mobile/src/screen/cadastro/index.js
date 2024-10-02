@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigation } from '@react-navigation/native';
 import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Button, Image, Alert, KeyboardAvoidingView, ScrollView } from "react-native";
 import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import axios from 'axios';
 // import { text } from "@fortawesome/fontawesome-svg-core";
+
 
 
 export default function Cadastro() {
