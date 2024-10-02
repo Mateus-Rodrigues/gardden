@@ -76,7 +76,7 @@ export default function Cadastro() {
 
   };
 
-  const [isSenhaVisible, setIsSenhaVisible] = useState(true);
+  const [isSenhaVisible, setIsSenhaVisible] = useState(false);
 
   return (
     <View>
@@ -104,8 +104,17 @@ export default function Cadastro() {
 
 
                 <View style={styles.olhoInput}>
-                  <TextInput placeholder="Senha" style={styles.inpTex} onChangeText={text => setSenha(text)} placeholderTextColor={'#fff'} />
-                  <Icon name="eye" size={20} color="#000" style={styles.iconInput} />
+                  <TextInput 
+                  placeholder="Senha" 
+                  style={styles.inpTex} 
+                  onChangeText={text => setSenha(text)} 
+                  placeholderTextColor={'#fff'} 
+                  secureTextEntry={!isSenhaVisible}/>
+                  
+                  <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
+                  <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
+                  </TouchableOpacity>
+                  
                 </View>
 
 
