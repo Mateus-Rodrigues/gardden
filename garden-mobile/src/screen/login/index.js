@@ -40,18 +40,19 @@ const Login = () => {
           <View style={styles.textForm}>
             <TextInput style={styles.inpTex} placeholder="Nome de usuário"/* value="Nome de usuário"*/ onChangeText={setUsuario} placeholderTextColor={'#fff'} />
 
-            <View style={styles.olhoInput}>
-              
-            <TextInput
-              placeholder="Senha"
-              style={styles.inpTex}
-              onChangeText={text => setSenha(text)}
-              placeholderTextColor={'#fff'}
-              secureTextEntry={!isSenhaVisible} />
 
-            <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
-              <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
-            </TouchableOpacity>
+            <View style={styles.olhoInput}>
+
+              <TextInput
+                placeholder="Senha"
+                style={styles.inpTex}
+                onChangeText={text => setSenha(text)}
+                placeholderTextColor={'#fff'}
+                secureTextEntry={!isSenhaVisible} />
+
+              <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
+                <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
+              </TouchableOpacity>
             </View>
 
 

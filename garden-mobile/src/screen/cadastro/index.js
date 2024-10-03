@@ -79,7 +79,6 @@ export default function Cadastro() {
   };
 
   const [isSenhaVisible, setIsSenhaVisible] = useState(false);
-  const [isConfirmarVisible, setIsConfirmarVisible] = useState(false);
 
   return (
     <View>
@@ -107,30 +106,29 @@ export default function Cadastro() {
 
 
                 <View style={styles.olhoInput}>
-                  <TextInput
-                    placeholder="Senha"
-                    style={styles.inpTex}
-                    onChangeText={text => setSenha(text)}
-                    placeholderTextColor={'#fff'}
-                    secureTextEntry={!isSenhaVisible} />
-
+                  <TextInput 
+                  placeholder="Senha" 
+                  style={styles.inpTex} 
+                  onChangeText={text => setSenha(text)} 
+                  placeholderTextColor={'#fff'} 
+                  secureTextEntry={!isSenhaVisible}/>
+                  
                   <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
-                    <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
+                  <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
                   </TouchableOpacity>
-
+                  
                 </View>
 
 
                 <View style={styles.olhoInput}>
-                  <TextInput
-                    placeholder="Confirmar senha"
-                    style={styles.inpTex}
-                    onChangeText={text => setConfirmar(text)}
-                    placeholderTextColor={'#fff'}
-                    secureTextEntry={!isConfirmarVisible} />
-
-                  <TouchableOpacity onPress={() => setIsConfirmarVisible(!isConfirmarVisible)}>
-                    <Icon name={isConfirmarVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
+                  <TextInput 
+                  placeholder="Confirmar senha" 
+                  style={styles.inpTex} 
+                  onChangeText={text => setConfirmar(text)} 
+                  placeholderTextColor={'#fff'} 
+                  secureTextEntry={!isSenhaVisible} />
+                  <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
+                    <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
                   </TouchableOpacity>
                 </View>
 

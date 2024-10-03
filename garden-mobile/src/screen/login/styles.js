@@ -48,27 +48,28 @@ const styles = StyleSheet.create({
 
   inpTex:{
     borderWidth:1,
-    marginTop: 25,
+    marginTop: 9,
     borderColor: '#fff',
     color: '#fff',
     fontSize: 20,
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
+    width: '100%'
   },
 
   olhoInput:{
     display: 'flex',
     flexDirection: 'row',
     //justifyContent: 'flex-end',
-    alignItems: 'center'
+    alignItems: 'center',
     
   },
 
   iconInput: {
     marginLeft: -25,
     color: '#fff',
-    position: 'relative'
+    position: 'relative',
     
   },
 
