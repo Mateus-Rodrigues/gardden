@@ -57,6 +57,21 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
   },
 
+  olhoInput:{
+    display: 'flex',
+    flexDirection: 'row',
+    //justifyContent: 'flex-end',
+    alignItems: 'center'
+    
+  },
+
+  iconInput: {
+    marginLeft: -25,
+    color: '#fff',
+    position: 'relative'
+    
+  },
+
   links:{
     cursor: 'pointer',
     textAlign: 'center',

@@ -21,6 +21,8 @@ const Login = () => {
 
   };
 
+  const [isSenhaVisible, setIsSenhaVisible] = useState(false);
+
   return (
     <View>
       <StatusBar
@@ -38,8 +40,21 @@ const Login = () => {
           <View style={styles.textForm}>
             <TextInput style={styles.inpTex} placeholder="Nome de usuário"/* value="Nome de usuário"*/ onChangeText={setUsuario} placeholderTextColor={'#fff'} />
 
-            {/* <Icon name="eye" size={20} color="#fff" style={styles.icon} /> */}
-            <TextInput style={styles.inpTex} placeholder="Senha" /*value="Senha"*/ onChangeText={setSenha} placeholderTextColor={'#fff'} />
+            <View style={styles.olhoInput}>
+              
+            <TextInput
+              placeholder="Senha"
+              style={styles.inpTex}
+              onChangeText={text => setSenha(text)}
+              placeholderTextColor={'#fff'}
+              secureTextEntry={!isSenhaVisible} />
+
+            <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
+              <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
+            </TouchableOpacity>
+            </View>
+
+
           </View>
           <MyButton title="ENTRAR" onClick={handleLogin} />
 
