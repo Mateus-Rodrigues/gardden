@@ -1,83 +1,80 @@
 import { StyleSheet } from 'react-native';
 
+// Definindo constantes para cores e tamanhos
+const colors = {
+  white: '#fff',
+  semiTransparentWhite: 'rgba(255,255,255,0.3)',
+};
+
+const sizes = {
+  imgWidth: '101%',
+  containerWidth: 370,
+  containerHeight: 540,
+  titleFontSize: 64,
+  cadFontSize: 45,
+  inputFontSize: 20,
+  linkFontSize: 15,
+};
+
 const styles = StyleSheet.create({
-  img:{
-    width: '101%',
-    height: '100%'
+  img: {
+    width: sizes.imgWidth,
+    height: '100%',
   },
-  
-  container:{
-    marginTop:60,
-    width: 370,
-    height: 540,
-    color: '#fff',
+  container: {
+    marginTop: 60,
+    width: sizes.containerWidth,
+    height: sizes.containerHeight,
     borderWidth: 1,
     marginLeft: '3%',
-    borderColor: '#fff',
-    backgroundColor: 'rgba(255,255,255,0.3)',
+    borderColor: colors.white,
+    backgroundColor: colors.semiTransparentWhite,
     padding: 15,
-    borderRadius: 10
-  
+    borderRadius: 10,
   },
-  
-  title:{
+  title: {
     marginTop: 40,
-    fontSize: 64,
-    color:'#fff', 
-    alignContent: 'center',
+    fontSize: sizes.titleFontSize,
+    color: colors.white,
     textAlign: 'center',
-    fontWeight: 'bold'
-    
+    fontWeight: 'bold',
   },
-  
   cad: {
-    fontSize: 45,
-    color:'#fff',
-    textAlign:'center',
+    fontSize: sizes.cadFontSize,
+    color: colors.white,
+    textAlign: 'center',
     marginBottom: 40,
   },
-
-  textForm:{
-    color: "#fff",
-    
+  textForm: {
+    color: colors.white,
   },
-
   icon: {
     marginRight: 100,
   },
-
-  inpTex:{
-    borderWidth:1,
+  inpTex: {
+    borderWidth: 1,
     marginTop: 9,
-    borderColor: '#fff',
-    color: '#fff',
-    fontSize: 20,
+    borderColor: colors.white,
+    color: colors.white,
+    fontSize: sizes.inputFontSize,
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderTopWidth: 0,
-    width: '100%'
+    width: '100%',
   },
-
-  olhoInput:{
-    display: 'flex',
+  olhoInput: {
     flexDirection: 'row',
-    //justifyContent: 'flex-end',
     alignItems: 'center',
-    
   },
-
   iconInput: {
     marginLeft: -25,
-    color: '#fff',
+    color: colors.white,
     position: 'relative',
-    
   },
-
-  links:{
-    cursor: 'pointer',
+  links: {
     textAlign: 'center',
-    fontSize:15,
-    color: '#fff',
+    fontSize: sizes.linkFontSize,
+    color: colors.white,
     marginBottom: 20,
     fontWeight: 'bold',
   },

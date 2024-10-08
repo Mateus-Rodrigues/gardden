@@ -1,85 +1,81 @@
 import { StyleSheet } from 'react-native';
 
+// Definindo constantes para cores e tamanhos
+const colors = {
+  white: '#fff',
+  green: '#074A05',
+  semiTransparentWhite: 'rgba(255,255,255,0.3)',
+};
+
+const sizes = {
+  imgWidth: '101%',
+  containerWidth: 370,
+  containerHeight: 540,
+  titleFontSize: 64,
+  cadFontSize: 45,
+  inputFontSize: 20,
+  buttonFontSize: 18,
+};
+
 const styles = StyleSheet.create({
   img: {
-    width: '101%',
+    width: sizes.imgWidth,
     height: '100%',
-    
   },
-
   container: {
     marginTop: 15,
-    width: 370,
-    height: 540,
-    color: '#fff',
+    width: sizes.containerWidth,
+    height: sizes.containerHeight,
     borderWidth: 1,
     marginLeft: '3%',
-    borderColor: '#fff',
-    backgroundColor: 'rgba(255,255,255,0.3)',
+    borderColor: colors.white,
+    backgroundColor: colors.semiTransparentWhite,
     padding: 15,
-    borderRadius: 15
-
+    borderRadius: 15,
   },
-
   title: {
     marginTop: 35,
-    fontSize: 64,
-    color: '#fff',
-    alignContent: 'center',
+    fontSize: sizes.titleFontSize,
+    color: colors.white,
     textAlign: 'center',
     fontWeight: 'bold',
-    
-
   },
-
   cad: {
-    fontSize: 45,
-    color: '#fff',
+    fontSize: sizes.cadFontSize,
+    color: colors.white,
     textAlign: 'center',
     marginBottom: 20,
   },
-
-
-
-  olhoInput:{
-    display: 'flex',
+  olhoInput: {
     flexDirection: 'row',
-    //justifyContent: 'flex-end',
-    alignItems: 'center'
-    
+    alignItems: 'center',
   },
-
-  ImageStyle: {
+  imageStyle: {
     padding: 10,
     margin: 5,
     height: 25,
     width: 25,
-    resizeMode : 'stretch',
+    resizeMode: 'stretch',
   },
-
   iconInput: {
     marginLeft: -25,
-    color: '#fff',
-    position: 'relative'
-    
+    color: colors.white,
+    position: 'relative',
   },
-
   inpTex: {
-
     borderWidth: 1,
     marginTop: 10,
     marginBottom: 5,
-    borderColor: '#fff',
-    color: '#fff',
-    fontSize: 20,
+    borderColor: colors.white,
+    color: colors.white,
+    fontSize: sizes.inputFontSize,
+    borderTopWidth: 0,
     borderLeftWidth: 0,
     borderRightWidth: 0,
-    borderTopWidth: 0,
-    width: '100%'
+    width: '100%',
   },
-
   button: {
-    backgroundColor: '#074A05',
+    backgroundColor: colors.green,
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 25,
@@ -88,10 +84,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: '#fff',
-    fontSize: 18,
-  }
-
+    color: colors.white,
+    fontSize: sizes.buttonFontSize,
+  },
 });
 
 export default styles;
