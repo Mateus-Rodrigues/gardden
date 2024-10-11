@@ -4,6 +4,7 @@ import { TextInput, Text, View, ImageBackground, TouchableOpacity, StatusBar, Pr
 import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import api from "../../services/api";
 import Cadastro from "../cadastro";
 
 
@@ -13,11 +14,19 @@ const Login = () => {
   const [usuario, setUsuario] = useState('');
   const [senha, setSenha] = useState('');
 
-  const handleLogin = () => {
+  async function handleLogin  ()  {
     // Lógica de login aqui
+    try{
+      const response = await api.post("/usuarios/login", {
+        email,
+        senha
+      });
 
-    console.log('Usuario:', usuario);
-    console.log('Senha:', senha);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error)
+
+    }
 
   };
 
