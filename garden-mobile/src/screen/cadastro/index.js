@@ -83,6 +83,10 @@ export default function Cadastro() {
 
   const [isSenhaVisible, setIsSenhaVisible] = useState(false);
 
+  // function cadastrarUsu(){
+
+  /*}*/
+
   return (
     <View>
       <StatusBar
