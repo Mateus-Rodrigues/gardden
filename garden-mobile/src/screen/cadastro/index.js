@@ -5,7 +5,7 @@ import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import api from "../../services/api";
-// import axios from 'axios';
+import axios from 'axios';
 // import { text } from "@fortawesome/fontawesome-svg-core";
 
 
@@ -59,6 +59,26 @@ export default function Cadastro() {
 
     }
   }
+
+
+  const handleRegister = async () => {
+    try {
+      const response = await api.post('/usuarios', {
+        nome,
+        usuario,
+        email,
+        trabalho,
+        estCivil,
+        senha,
+        confirmar
+      });
+      Alert.alert('Sucesso', 'Cadastro realizado com sucesso!');
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+      Alert.alert('Erro', 'Não foi possível realizar o cadastro.');
+    }
+  };
 
   const [nome, setNome] = useState('');
   const [usuario, setUsuario] = useState('');
@@ -141,7 +161,7 @@ export default function Cadastro() {
 
               </View>
 
-              <MyButton title="CRIAR" onClick={Validacao} />
+              <MyButton title="CRIAR" onClick={handleRegister} />
             </View>
           </ScrollView>
         </KeyboardAvoidingView>
