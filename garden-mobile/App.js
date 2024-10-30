@@ -21,7 +21,7 @@ export default function App() {
         <Stack.Screen 
           name="Cadastro" 
           component={Cadastro} 
-          options={{ headerShown: true }}  // Cabeçalho pode ser mostrado na tela de cadastro
+          options={{ headerShown: false }}  // Cabeçalho pode ser mostrado na tela de cadastro
         />
       </Stack.Navigator>
     </NavigationContainer>
