@@ -5,7 +5,7 @@ import styles from "./styles";
 import MyButton from "../../components/button";
 import Icon from 'react-native-vector-icons/FontAwesome';
 import api from "../../services/api";
-import axios from 'axios';
+// import axios from 'axios';
 // import { text } from "@fortawesome/fontawesome-svg-core";
 
 
