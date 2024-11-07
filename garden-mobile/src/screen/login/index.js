@@ -11,15 +11,15 @@ import Cadastro from "../cadastro";
 const Login = () => {
   const navigation = useNavigation();  // Hook para acessar navegação
 
-  const [usuario, setUsuario] = useState('');
-  const [senha, setSenha] = useState('');
+  const [usu_email, setUsuario] = useState('');
+  const [usu_senha, setSenha] = useState('');
 
   async function handleLogin  ()  {
     // Lógica de login aqui
     try{
       const response = await api.post("/usuarios/login", {
-        email,
-        senha
+        usu_email,
+        usu_senha
       });
 
       console.log(response.data);
