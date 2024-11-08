@@ -32,7 +32,7 @@ export default function Cadastro() {
     return true
   };
 
-
+}
   const Validacao = () => {
 
     if (senha !== confirmar) {
@@ -70,14 +70,13 @@ export default function Cadastro() {
     
 
     try {
-      const response = await api.post('/usuarios/cadastrarUsuarios', {
+
+      const response = await api.post('/usuarios', {
         usu_nome,
         usu_nick,
         usu_email,
-        trabalho,
-        estCivil,
         usu_senha,
-        confirmar
+        usu_adm
       });
       Alert.alert('Sucesso', 'Cadastro realizado com sucesso!');
       console.log(response.data);
@@ -90,10 +89,11 @@ export default function Cadastro() {
   const [usu_nome, setNome] = useState('');
   const [usu_nick, setUsuario] = useState('');
   const [usu_email, setEmail] = useState('');
-  const [trabalho, setTrabalho] = useState('');
-  const [estCivil, setEstCivil] = useState('');
-  const [usu_senha, setSenha] = useState('');
-  const [confirmar, setConfirmar] = useState('');
+// <<<<<<< HEAD
+//   const [trabalho, setTrabalho] = useState('');
+//   const [estCivil, setEstCivil] = useState('');
+  // const [usu_senha, setSenha] = useState('');
+//   const [confirmar, setConfirmar] = useState('');
 
   // const handleLogin = () => {
   //   // Lógica de login aqui
@@ -105,6 +105,26 @@ export default function Cadastro() {
   //   console.log('Senha:', senha);
   //   console.log('Confirmar Senha:', confirmar);
   //   console.log("*******************");
+// =======
+  // const [trabalho, setTrabalho] = useState('');
+  // const [estCivil, setEstCivil] = useState('');
+
+  const [usu_senha, setSenha] = useState('');
+  const [usu_adm, setAdm] = useState('');
+  // const [confirmar, setConfirmar] = useState('');
+
+  const handleLogin = () => {
+    // Lógica de login aqui
+    console.log('Nome:', usu_nome);
+    console.log('Usuario:', usu_nick);
+    console.log('Email:', usu_email);
+    // console.log('Profissão:', trabalho);
+    // console.log('estado civil:', estCivil);
+    console.log('Senha:', usu_senha);
+    console.log('Adm:', usu_adm);
+    // console.log('Confirmar Senha:', confirmar);
+    console.log("*******************");
+// >>>>>>> 4be544d7c3e75f97b58bee3f0a57fad1927bda54
 
   // };
 
@@ -135,9 +155,8 @@ export default function Cadastro() {
                 <TextInput placeholder="Nome Completo " style={styles.inpTex} onChangeText={setNome} keyboardType="default" placeholderTextColor={'#fff'} />
                 <TextInput placeholder="Nome de usuário" style={styles.inpTex} onChangeText={setUsuario} placeholderTextColor={'#fff'} />
                 <TextInput placeholder="E-mail" style={styles.inpTex} onChangeText={setEmail} placeholderTextColor={'#fff'} />
-                <TextInput placeholder="Profissão" style={styles.inpTex} onChangeText={setTrabalho} placeholderTextColor={'#fff'} />
-                <TextInput placeholder="Estado Civil" style={styles.inpTex} onChangeText={setEstCivil} placeholderTextColor={'#fff'} />
-
+                
+                
 
                 <View style={styles.olhoInput}>
                   <TextInput 
@@ -151,20 +170,23 @@ export default function Cadastro() {
                   <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
                   </TouchableOpacity>
                   
+                
+
                 </View>
+                <TextInput placeholder="Adm" style={styles.inpTex} onChangeText={setAdm} placeholderTextColor={'#fff'} />
 
 
-                <View style={styles.olhoInput}>
-                  <TextInput 
-                  placeholder="Confirmar senha" 
-                  style={styles.inpTex} 
-                  onChangeText={text => setConfirmar(text)} 
-                  placeholderTextColor={'#fff'} 
-                  secureTextEntry={!isSenhaVisible} />
-                  <TouchableOpacity onPress={() => setIsSenhaVisible(!isSenhaVisible)}>
-                    <Icon name={isSenhaVisible ? 'eye' : 'eye-slash'} size={20} color="#000" style={styles.iconInput} />
-                  </TouchableOpacity>
-                </View>
+               
+               
+               
+               
+               
+               
+               
+               
+               
+               
+                
 
               </View>
 
