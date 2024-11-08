@@ -62,14 +62,21 @@ export default function Cadastro() {
 
 
   const handleRegister = async () => {
+
+    if (!nome || !usuario || !email || !senha || senha !== confirmar) {
+      Alert.alert('Erro', 'Por favor, preencha todos os campos corretamente.');
+      return;
+    }
+    
+
     try {
-      const response = await api.post('/usuarios', {
-        nome,
-        usuario,
-        email,
+      const response = await api.post('/usuarios/cadastrarUsuarios', {
+        usu_nome,
+        usu_nick,
+        usu_email,
         trabalho,
         estCivil,
-        senha,
+        usu_senha,
         confirmar
       });
       Alert.alert('Sucesso', 'Cadastro realizado com sucesso!');
@@ -80,26 +87,26 @@ export default function Cadastro() {
     }
   };
 
-  const [nome, setNome] = useState('');
-  const [usuario, setUsuario] = useState('');
-  const [email, setEmail] = useState('');
+  const [usu_nome, setNome] = useState('');
+  const [usu_nick, setUsuario] = useState('');
+  const [usu_email, setEmail] = useState('');
   const [trabalho, setTrabalho] = useState('');
   const [estCivil, setEstCivil] = useState('');
-  const [senha, setSenha] = useState('');
+  const [usu_senha, setSenha] = useState('');
   const [confirmar, setConfirmar] = useState('');
 
-  const handleLogin = () => {
-    // Lógica de login aqui
-    console.log('Nome:', nome);
-    console.log('Usuario:', usuario);
-    console.log('Email:', email);
-    console.log('Profissão:', trabalho);
-    console.log('estado civil:', estCivil);
-    console.log('Senha:', senha);
-    console.log('Confirmar Senha:', confirmar);
-    console.log("*******************");
+  // const handleLogin = () => {
+  //   // Lógica de login aqui
+  //   console.log('Nome:', nome);
+  //   console.log('Usuario:', usuario);
+  //   console.log('Email:', email);
+  //   console.log('Profissão:', trabalho);
+  //   console.log('estado civil:', estCivil);
+  //   console.log('Senha:', senha);
+  //   console.log('Confirmar Senha:', confirmar);
+  //   console.log("*******************");
 
-  };
+  // };
 
   const [isSenhaVisible, setIsSenhaVisible] = useState(false);
 
